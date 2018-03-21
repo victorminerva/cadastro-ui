@@ -1,0 +1,10 @@
+<form [formGroup]="userForm" novalidate>
+  <div>
+    <h1>Crie sua conta</h1>
+    <input type="text" formControlName="usuarioNome" placeholder="Usuário">
+    <input type="text" formControlName="email" placeholder="E-mail">
+    <input type="text" formControlName="senha" placeholder="Senha">
+
+    <button [disabled]="!userForm.valid" (click)="registerUser(userForm.value)">Começar agora!</button>
+  </div>
+</form>
